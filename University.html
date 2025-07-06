@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="University Homepage with announcements and image" />
+  <title>University - ESTU </title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:wght@500&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'DM Serif Display', serif;
+      font-weight: 650;
+      background-color: #f9f9f9;
+      color: #1a1a1a;
+    }
+    .sidebar {
+      min-height: 100vh;
+      background-color: #600707;
+      padding-top: 50px;
+      text-align: center;
+    }
+    .sidebar a {
+      display: block;
+      padding: 20px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      border-left: 4px solid transparent;
+    }
+    .sidebar a:hover {
+      background-color: #600707;
+      color: #fff;
+      padding-left: 20px;
+    }
+    .sidebar a.active {
+      background-color: #600707;
+      font-weight: bold;
+      font-size: 1.2rem;
+      border-left: 4px solid #fff;
+    }
+    .dropdown-container {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+    }
+    .sidebar a.students:hover + .dropdown-container,
+    .dropdown-container:hover {
+      display: flex;
+    }
+    .dropdown-container a {
+      padding: 5px 10px;
+      font-size: 1rem;
+      color: #fff;
+    }
+    .content-area {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      padding: 30px 20px 60px;
+    }
+    .university-img {
+      max-width: 80%;
+      max-height: 400px;
+      margin-top: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      transition: opacity 0.3s ease;
+      margin-bottom: 30px;
+    }
+    .university-img:hover {
+      opacity: 0.6;
+    }
+    h1, h3 {
+      color: #5d0a0a;
+      margin-bottom: 20px;
+    }
+    .university-info {
+      max-width: 900px;
+      text-align: justify;
+      font-size: 1.1rem;
+    }
+    input[type="checkbox"] {
+      display: none;
+    }
+    .extra-text {
+      display: none;
+    }
+    input[type="checkbox"]:checked ~ .extra-text {
+      display: block;
+    }
+    .toggle-label {
+      display: inline-block;
+      margin-top: 10px;
+      color: #600707;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    footer {
+      margin-top: 60px;
+      padding: 14px 20px;
+      background-color: #4B0000;
+      color: #f0f0f0;
+      text-align: center;
+      font-size: 0.9rem;
+      border-radius: 8px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-2 sidebar d-flex flex-column align-items-center">
+        <a href="home.html">Home</a>
+        <a href="university.html" class="active">University</a>
+        <a href="academics.html">Academics</a>
+        <a href="students.html" class="students">Students</a>
+        <div class="dropdown-container">
+          <a href="login.html">Login</a>
+          <a href="documents.html">Documents</a>
+        </div>
+        <a href="campuslife.html">Campus Life</a>
+      </nav>
+
+      <main class="col-md-10 content-area">
+        <h1><b>ABOUT OUR UNIVERSITY</b></h1>
+        <img src="estü4.jpg" alt="University Image" class="university-img" />
+
+        <div class="university-info">
+          <p>
+            Established in 2018, Eskişehir Technical University carries forward a strong legacy of higher education and research. The university hosts over 10,000 students, more than 800 academic staff, and 20 administrative departments.
+          </p>
+
+          <input type="checkbox" id="readmore">
+          <div class="extra-text">
+            <p>
+              With a focus on science, technology, and innovation, ESTU aims to create global impact through its research and education programs. The university operates in three campuses with 5 faculties, 3 vocational schools, 1 school, 3 institutes, and 8 research and application centers. It also operates the Hasan Polatkan International Airport, which offers flights on different days of the week via various airlines.
+            </p>
+          </div>
+          <label for="readmore" class="toggle-label">Show More</label>
+        </div>
+
+        <footer>
+          Eskisehir Technical University<br />
+          &copy; 2025. Designed by Pelin Kaynarpınar.
+        </footer>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
